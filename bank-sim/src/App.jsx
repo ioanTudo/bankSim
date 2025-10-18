@@ -3,8 +3,8 @@ import "./App.css";
 import { createAccount } from "./func/bankFunctionality";
 
 function App() {
-  const funcRef = useRef(createAccount(100));
-  const anotherRef = useRef(createAccount(0));
+  const funcRef = useRef(new createAccount(100));
+  const anotherRef = useRef(new createAccount(0));
   const [balanceA, setBalanceA] = useState(funcRef.current.getBalance());
   const [balanceB, setBalanceB] = useState(anotherRef.current.getBalance());
   const [historyA, setHistoryA] = useState([...funcRef.current.getHistory()]);
